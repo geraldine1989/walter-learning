@@ -4,8 +4,12 @@ import { START_TIMER } from 'redux-timer';
  * Initial State
  */
 const initialState = {
-  counter: 40,
+  counter: 30,
+  counter2: 35,
+  counter3: 40,
   color: '#B5F1FF',
+  color2: '#B5F1FF',
+  color3: '#B5F1FF',
 };
 
 /**
@@ -22,34 +26,108 @@ const TIMER = 'TIMER';
  */
 const reducer = (state = initialState, action = {}) => {
 
-  const {counter} = state;
+  const { counter, counter2, counter3 } = state;
 
   switch (action.type) {
   
     case TIMER:
+      // all are blue
       if (counter > 20) {
         return {
           ...state,
-          color: '#B5F1FF',
           counter: state.counter - 1,
+          counter2: state.counter2 - 1,
+          counter3: state.counter3 - 1,
         }
-      } else if (counter > 12 ) {
+      } 
+      // counter1 is orange
+      else if (counter > 12 && counter2 > 20 && counter3 > 20) {
         return {
           ...state,
           counter: state.counter - 1,
+          counter2: state.counter2 - 1,
+          counter3: state.counter3 - 1,
           color: '#FF9274',
         }
       }
-      else if (counter > 0 ) {
+      // counter2 is orange
+      else if (counter > 12 && counter2 > 12 && counter3 > 20) {
         return {
           ...state,
           counter: state.counter - 1,
+          counter2: state.counter2 - 1,
+          counter3: state.counter3 - 1,
+          color2: '#FF9274',
+        }
+      }
+
+      // counter1 is red
+      else if (counter >0  && counter2 > 12 && counter3 > 20) {
+        return {
+          ...state,
+          counter: state.counter - 1,
+          counter2: state.counter2 - 1,
+          counter3: state.counter3 - 1,
           color: '#FF5A54',
+        }
+      }
+
+       // counter3 is orange
+       else if (counter > 0  && counter2 > 12 && counter3 > 12) {
+        return {
+          ...state,
+          counter: state.counter - 1,
+          counter2: state.counter2 - 1,
+          counter3: state.counter3 - 1,
+          color3: '#FF9274',
+         
+        }
+      }
+
+      // counter2 is red
+      else if (counter > 0  && counter2 > 0 && counter3 > 12) {
+        return {
+          ...state,
+          counter: state.counter - 1,
+          counter2: state.counter2 - 1,
+          counter3: state.counter3 - 1,
+          color2: '#FF5A54',
+        }
+      }
+
+       // counter3 is red
+       else if (counter > 0  && counter2 > 0 && counter3 > 0) {
+        return {
+          ...state,
+          counter: state.counter - 1,
+          counter2: state.counter2 - 1,
+          counter3: state.counter3 - 1,
+          color3: '#FF5A54',
+        }
+      }
+
+      else if (counter === 0  && counter2 > 0 && counter3 > 0) {
+        return {
+          ...state,
+          counter: 0,
+          counter2: state.counter2 - 1,
+          counter3: state.counter3 - 1,
+        }
+      }
+
+      else if (counter === 0  && counter2 === 0 && counter3 > 0) {
+        return {
+          ...state,
+          counter: 0,
+          counter2: 0,
+          counter3: state.counter3 - 1,
         }
       }
       return {
         ...state,
         counter: 0,
+        counter2: 0,
+        counter3: 0,
       }
     default:
       return state;

@@ -16,7 +16,11 @@ import { timer, startTimer } from 'src/store/reducer';
  */
 const mapStateToProps = (state, ownProps) => ({
   counter: state.counter,
+  counter2: state.counter2,
+  counter3: state.counter3,
   color: state.color,
+  color2: state.color2,
+  color3: state.color3,
 });
 
 /* === Actions ===
