@@ -1,0 +1,16 @@
+#counter {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  & #counter-content {
+    display: flex;
+    width: 50%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    margin-top: 2em;
+  }
+
+}
