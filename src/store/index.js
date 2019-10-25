@@ -1,8 +1,8 @@
 /*
  * Npm import
  */
-import { createStore } from 'redux';
-
+import { createStore, applyMiddleware, compose  } from 'redux';
+import timerMiddleware from 'redux-timer';
 /*
  * Local import
  */
@@ -15,10 +15,10 @@ import reducer from 'src/store/reducer';
 const devTools = [
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 ];
-
+const enhancers = compose(applyMiddleware(timerMiddleware), ...devTools)
 
 // createStore
-const store = createStore(reducer, ...devTools);
+const store = createStore(reducer, enhancers);
 
 /*
  * Export

@@ -1,3 +1,5 @@
+import { START_TIMER } from 'redux-timer';
+
 /**
  * Initial State
  */
@@ -61,7 +63,15 @@ const reducer = (state = initialState, action = {}) => {
 export const timer = () => ({
   type: TIMER,
 });
-
+export const startTimer = () => ({
+  type: START_TIMER,
+  payload: {
+    name: 'exampleTimer',
+    action: 'TIMER',
+    interval: 1000,
+    runImmediately: true
+  }
+});
 /**
  * Selectors
  */
