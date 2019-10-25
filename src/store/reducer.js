@@ -3,7 +3,7 @@
  */
 const initialState = {
   counter: 40,
-  color: 'blue',
+  color: '#B5F1FF',
 };
 
 /**
@@ -28,21 +28,21 @@ const reducer = (state = initialState, action = {}) => {
       if (counter > 20) {
         return {
           ...state,
-          color: 'blue',
+          color: '#B5F1FF',
           counter: state.counter - 1,
         }
       } else if (counter > 12 ) {
         return {
           ...state,
           counter: state.counter - 1,
-          color: 'orange',
+          color: '#FF9274',
         }
       }
       else if (counter > 0 ) {
         return {
           ...state,
           counter: state.counter - 1,
-          color: 'red',
+          color: '#FF5A54',
         }
       }
       return {

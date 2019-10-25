@@ -12,7 +12,7 @@ const Counter = ({ counter, timer, color }) => {
   return (
     <div id="counter">
       <div id="counter-content" onClick={handletimer} style={{
-        backgroundColor: color}}>{counter} Cliquez moi</div>
+        backgroundColor: color}}>Nombre de clics restants : {counter}</div>
     </div>
   );
 
