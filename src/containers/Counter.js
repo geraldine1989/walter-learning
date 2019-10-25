@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import Counter from 'src/components/Counter';
 
 // Action Creators
-import { timer, startTimer } from 'src/store/reducer';
+import { timer, startTimer, stopTimer } from 'src/store/reducer';
 
 /* === State (données) ===
 
@@ -32,6 +32,9 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   },
   startTimer: () => {
     dispatch(startTimer());
+  },
+  stopTimer: () => {
+    dispatch(stopTimer());
   },
   
 });

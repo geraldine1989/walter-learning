@@ -1,12 +1,13 @@
 import { START_TIMER } from 'redux-timer';
+import { STOP_TIMER } from 'redux-timer';
 
 /**
  * Initial State
  */
 const initialState = {
-  counter: 30,
-  counter2: 35,
-  counter3: 40,
+  counter: 40,
+  counter2: 45,
+  counter3: 50,
   color: '#B5F1FF',
   color2: '#B5F1FF',
   color3: '#B5F1FF',
@@ -144,10 +145,17 @@ export const timer = () => ({
 export const startTimer = () => ({
   type: START_TIMER,
   payload: {
-    name: 'exampleTimer',
+    name: 'setTimer',
     action: 'TIMER',
     interval: 1000,
     runImmediately: true,
+  }
+});
+
+export const stopTimer = () => ({
+  type: STOP_TIMER,
+  payload: {
+    name: 'setTimer',
   }
 });
 /**
