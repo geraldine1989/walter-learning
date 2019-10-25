@@ -80,8 +80,7 @@ const reducer = (state = initialState, action = {}) => {
           counter: state.counter - 1,
           counter2: state.counter2 - 1,
           counter3: state.counter3 - 1,
-          color3: '#FF9274',
-         
+          color3: '#FF9274', 
         }
       }
 
