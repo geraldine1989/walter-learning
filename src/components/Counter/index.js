@@ -20,13 +20,13 @@ const Counter = ({ counter,counter2, counter3, color, color2, color3, startTimer
       <div id="counter-content">
         <div id="counter-content-forms">
           <div className="counter-content" style={{ backgroundColor: color }}>
-            {counter}
+            {counter >= 10 || counter === 0 ? counter : '0' + counter}
           </div>
           <div className="counter-content" style={{ backgroundColor: color2 }}>
-            {counter2}
+            {counter2 >= 10 || counter2 === 0 ? counter2 : '0' + counter2}
           </div>
           <div className="counter-content" style={{ backgroundColor: color3 }}>
-            {counter3}
+            {counter3 >= 10 || counter3 === 0 ? counter3 : '0' + counter3}
           </div>
         </div>
         <div id="counter-content-buttons">
