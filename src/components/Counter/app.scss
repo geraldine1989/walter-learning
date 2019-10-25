@@ -1,22 +1,59 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
 #counter {
   display: flex;
   width: 100%;
   justify-content: center;
-  
+  background-color: grey;
+  flex-wrap: wrap;
+  & h1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: white;
+    padding: 1em;
+    margin-bottom: 2em;
+    font-family: 'Fira Code', monospace;
+    border-bottom: 2px solid black;
+  }
   & #counter-content {
     display: flex;
-    width: 50%;
-    height: 300px;
+    width: 60%;
     justify-content: center;
-    align-items: center;
-    border-radius: 25px;
-    margin-top: 200px;
-    color: #2D3C40;
-    font-size: 2em;
-    font-family: 'Ubuntu', sans-serif;
-    box-shadow: 1px 1px 12px #555;
+    border-bottom: 3px solid black;
+    flex-wrap: wrap;
+    & #counter-content-forms {
+      display: flex;
+      width: 100%;
+      background-color: white;
+      justify-content: center;
+      flex-wrap: wrap;
+      border: 5px solid black;
+      padding: 4em;
+      & .counter-content{
+        display: flex;
+        width: 60%;
+        justify-content: center;
+        border: 1px solid black;
+        margin: 2em;
+        padding: 2em;
+        font-size: 1.2em;
+        border-radius: 15px;
+      }
+    }
+    & #counter-content-buttons{
+      display: flex;
+      width: 100%;
+      background-color: black;
+      padding: 1em;
+      justify-content: flex-end;
+      & button {
+        margin-left: 1em;
+        padding: .5em;
+        width: 7%;
+        border-radius: 10px;
+      }
+    }
+    
   }
-
 }
