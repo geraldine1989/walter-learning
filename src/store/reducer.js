@@ -69,7 +69,7 @@ export const startTimer = () => ({
     name: 'exampleTimer',
     action: 'TIMER',
     interval: 1000,
-    runImmediately: true
+    runImmediately: true,
   }
 });
 /**
