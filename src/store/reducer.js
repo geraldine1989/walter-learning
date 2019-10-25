@@ -3,6 +3,7 @@
  */
 const initialState = {
   counter: 40,
+  color: 'blue',
 };
 
 /**
@@ -18,14 +19,36 @@ const TIMER = 'TIMER';
  * Reducer
  */
 const reducer = (state = initialState, action = {}) => {
+
+  const {counter} = state;
+
   switch (action.type) {
   
     case TIMER:
+      if (counter > 20) {
+        return {
+          ...state,
+          color: 'blue',
+          counter: state.counter - 1,
+        }
+      } else if (counter > 12 ) {
+        return {
+          ...state,
+          counter: state.counter - 1,
+          color: 'orange',
+        }
+      }
+      else if (counter > 0 ) {
+        return {
+          ...state,
+          counter: state.counter - 1,
+          color: 'red',
+        }
+      }
       return {
         ...state,
-        counter: state.counter - 1,
-      };
-
+        counter: 0,
+      }
     default:
       return state;
   }

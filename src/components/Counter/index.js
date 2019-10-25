@@ -3,7 +3,7 @@ import React from 'react';
 import PropsTypes from 'prop-types';
 import './app.scss';
 
-const Counter = ({ counter, timer }) => {
+const Counter = ({ counter, timer, color }) => {
   
   const handletimer = () => {
     timer();
@@ -11,8 +11,8 @@ const Counter = ({ counter, timer }) => {
   
   return (
     <div id="counter">
-      <div id="counter-content" onClick={handletimer}>{counter} Cliquez moi</div>
-  
+      <div id="counter-content" onClick={handletimer} style={{
+        backgroundColor: color}}>{counter} Cliquez moi</div>
     </div>
   );
 
