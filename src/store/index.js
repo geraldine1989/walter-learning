@@ -13,7 +13,7 @@ import reducer from 'src/store/reducer';
  * Code
  */
 const devTools = [
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+ // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 ];
 const enhancers = compose(applyMiddleware(timerMiddleware), ...devTools)
 
